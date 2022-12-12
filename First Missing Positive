@@ -1,0 +1,20 @@
+   #include <bits/stdc++.h> 
+int firstMissing(int arr[], int n)
+{
+      
+   int store[1000000] = {0}; 
+   
+   for(int i = 0 ; i < n ; i++){
+       if( arr[i] > 0){
+           store[arr[i]]++;  // tracing of the number in store array 
+       }
+   }
+   
+   for(int i= 1 ;i<1000000 ; i++){
+       if( store[i] == 0){ // in store array if element of array is 0 then the index i will be the ans ;
+           return i;
+       }
+   }
+   
+   
+}
